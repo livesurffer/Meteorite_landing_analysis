@@ -18,7 +18,7 @@ cursor=con.cursor()
 
 
 for item in meteor_data:
-	place=item['name']
+	name=item['name']
 	nametype=item['nametype']
 	recclass=item['recclass']
 	fall=item['fall']
@@ -45,7 +45,7 @@ for item in meteor_data:
 	else:
 		longitude=None
 
-	cursor.execute('insert into meteoritedata(place,nametype,recclass,"mass g",fall,date,latitude,longitude)values(%s,%s,%s,%s,%s,%s,%s,%s)',
-	(place,nametype,recclass,meteor_mass,fall,short_date,latitude,longitude))
+	cursor.execute('insert into meteoritedata(name,nametype,recclass,"mass g",fall,date,latitude,longitude)values(%s,%s,%s,%s,%s,%s,%s,%s)',
+	(name,nametype,recclass,meteor_mass,fall,short_date,latitude,longitude))
 	con.commit()
 con.close()
