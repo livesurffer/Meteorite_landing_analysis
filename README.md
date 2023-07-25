@@ -27,5 +27,5 @@ PROJECT GOAL: Goal: Create a graph that displays the locations where meteorites 
 Realization:  two python modules: 1 - meteor.py (fetching data by json format, saving certain data into postgresql table, clearing data)
                                   2 - clearing, sorting and visualizing data
 
-                                
+python libraries: requests, psycopg2, matplotlib
 
